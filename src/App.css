@@ -2,10 +2,10 @@ main {
   min-height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 .navbar {
@@ -46,4 +46,80 @@ h1 {
 
 p {
   font-size: 1.2rem;
+}
+
+
+.application-form {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.application-form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.application-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.application-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #111827;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+.application-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.application-form label:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+.application-form button {
+  grid-column: 1 / -1;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.application-form button:hover {
+  background: #374151;
 }
